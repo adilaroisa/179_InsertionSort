@@ -31,6 +31,36 @@ void input() {  // Procedure input
     }
 }
 
+void insertionsort() { // Procedure insertionsort
+
+    int temp;          // Membuat variabel data temporer atau penyimpanan sementara
+    int i, j;         // Membuat variabel j sebagai penanda
+
+    for (i = 1; i <= n - 1; i++) { // 1. Looping dengan i dimulai dari 1 hingga n-1
+
+        temp = arr[i];              // 2. simpan nilai arr[i] ke variabel sementara temp
+
+        j = i - 1;                 // 3. setting nilai j sama dengan i-1
+
+        while (j >= 0 && arr[j] > temp) // 4. Looping whilw dimana nilai j lebih besar sama dengan o dan
+            // arr[j] lebih besar dari temp
+        {
+            arr[j + 1] = arr[j];       // 4a. simpan arr[j] ke dalam variabel arr[j+1]
+            j--;                       // 4b. Decreament nilai j by 1
+        }
+
+        arr[j + 1] = temp;             // Simpan nilai temp ke dalam arr[j+1]
+
+        cout << "\nPass " << i << ": "; // Output ke layar
+        for (int k = 0; k < n; k++) // Looping nilai j dimulai dari 0 hingga n-1        
+        {
+            cout << arr[k] << " "; // Output ke layar
+        }
+    }
+
+}
+
+
 int main()
 {
    
