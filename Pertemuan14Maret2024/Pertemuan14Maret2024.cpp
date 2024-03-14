@@ -74,6 +74,8 @@ void display() {         // Procedure untuk menampilkan hasil
 
 int main()
 {
-   
+    input();             // memanggil input 
+    insertionsort();     // memanggil insertion sort
+    display();           // memanggil display
 }
 
